@@ -13,6 +13,7 @@
 	            	"date": "4/10/2010",
 			        "title": "Sleep is for the weak",
 			        "subject": "Sleeping",
+                    "question": "How many hours did you sleep last night?",
 			        "input":"6"
 		    	}
             ]
