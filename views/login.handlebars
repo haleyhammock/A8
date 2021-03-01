@@ -9,6 +9,8 @@
 		<link href="/css/login.css" rel="stylesheet">
 		<script src="/js/login.js"></script>
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		{{> facebook}}
+<script src="/js/facebook.js"></script>
 	</head>
 
 	<body>
@@ -18,8 +20,11 @@
 	    	<div class="login">
 		    	<input type="text" id="username" placeholder="Username" required>
 	        	<input type="password" id="password" placeholder="Password" required>
+						<span class="forgot">Forgot <a href="#">password</a>?</span><br>
 	        	<input type="submit" onclick="login()" value="Login">
-	        	<span class="forgot">Forgot <a href="#">password</a>?</span>
+						<h4> or </h4><br>
+						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" size='xlarge'>
+						</fb:login-button>
         	</div>
 
 		</div>
