@@ -52,7 +52,7 @@ html {
   align-items: flex-end;
 }
 .nav{
-  float: right;
+  float: left;
   color: gray;
 }
 .data{
