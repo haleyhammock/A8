@@ -11,11 +11,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-
+{{> facebook}}
+<script src="/js/facebook.js"></script>
 </head>
 
 <body>
-	<div id="main" class="jumbotron">
+	<div id="main" class="jumbotron"style="background:transparent !important">
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -35,7 +36,7 @@
 					</li>
 				<li><a href="help">Help</a>
 					</li>
-				<li><button type="button" id="logout" class="btn btn-danger">Log Out</button>
+				<li><button type="button" id="logout" class="btn btn-danger"onclick=checklogout()>Log Out</button>
 					</li>
 				</ul>
 		</div>
@@ -43,35 +44,36 @@
 </div>
 	{{#each data}}
 	</div>
-		<h3 class="welcome"id='welcome'> Welcome, {{name}}</h3>
-		<p>Check out your stats for the day!:</p>
+		<h3 class="welcome"id='name'> Welcome, {{name}}</h3>
+
+		<p>Check out your recent stats!</p>
 	{{/each}}
 		<div class="data">
-			<button type="button" onClick="graph()" class="btn btn-primary">Graph Settings</button>
+			<button type="button" onClick="graph()" class="btncircle">i</button>
 			<div id="options" class="graph-content">
-				<p class="infos">Select an X-axis and a Y-axis to visualize your data overtime!</p>
-					<label class="grphxlabel" for="graph">X-axis</label>
-					<select name="X-axis" class="x-axis" id="graph">
-					<option value="day">day</option>
-					<option value="week">week</option>
-					<option value="month">month</option>
-					</select>
-					<div>
-						<span style="white-space: nowrap">
-							<label for="graph" class="grphylabel" >Y-axis</label>
-							<select name="Y-axis" class="y-axis" id="graph">
-								<option value="mood">mood</option>
-								<option value="sleep">sleep</option>
-								<option value="excercise">excercise</option>
-							</select>
-						</span>
-					</div>
+				<p class="infos">Select an interval to see your recent, all time, or today's stats</p>
 			</div>
+
 	  </div>
+		<label class="grphxlabel" for="graph">Interval</label>
+		<select name="X-axis" class="x-axis" id="intervals"name='timess'>
+		<option value="day">Recent</option>
+		<option value="week">Last Week</option>
+		<option value="month">All Time</option>
+	</select>
+<!--
+*** cant use an each block here since each bar needs to update individually ***
+-->
 		<div class="graph">
-			<p></p>
-			<img src="images/img_graph.JPG" alt="Record some data" width="300" height="300">
-		</div>
+			<p>Sleep</p>
+			<p id="msg" style='font-size: 12'>Needs Improvement<p>
+			<div class="progress" >
+  		<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow='60' aria-valuemin="0" aria-valuemax="100" style="width: 70%;" id='prog'>
+    <span class="sr-only">60% Complete</span>
+  </div>
+</div>
+</div>
+
 	</div>
 </body>
 </html>

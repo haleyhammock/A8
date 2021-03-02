@@ -16,7 +16,7 @@
 	</head>
 
 	<body>
-		<div id="main" class="jumbotron">
+		<div id="main" class="jumbotron" style="background:transparent !important">
 			<div class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
@@ -47,7 +47,8 @@
 	    {{#each data}}
 	    <div>
 	    	<img class="profile-pic" id='profpic'src="images/default_profile_picture.JPG" width = "200" height = "200"alt="Profile Picture">
-			<h3 class="name">{{name}}</h3>
+			<h3 class="name" id='name'>{{name}}</h3>
+
 			<p class="age">Age: {{age}}</p>
 			<p class="location"> Location: {{city}}, {{state}}</p>
 		</div>
