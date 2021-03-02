@@ -54,52 +54,53 @@
 	<div class=container>
 		<form id="addRecordForm" role="form" method="get" action="/addRecord" class="was-validated">
 			<div class="form-group">
-				<label class="formlabels" for="subject">Subject:</label>
-				<select name="subject" id="subject">
-					<option value="Sleeping" selected>Sleep</option>
+				<label for="subject">Subject</label>
+				<select name="subject" class="custom-select" id="subject">
+					<option value="Sleeping">Sleep</option>
 					<option value="Mood">Mood</option>
 					<option value="Exercise">Excercise</option>
 				</select>
 			</div>
-			<div class="form-group">		
-				<label class="formlabels" for="title">Title:</label>
-				<input type="text" id="title" placeholder="Enter title" name="title" required>
+			<div class="form-group">
+				<label for="title">Title</label>
+				<input type="text" class="form-control" id="title" placeholder="Enter title" name="title" required>
 				<div class="invalid-feedback">
 					Please enter a title.
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="formlabels" for="date">Date:</label>
-				<input type="text" id="date" placeholder="mm/dd/yyyy" name="date" required>
+				<label for="date">Date</label>
+				<input type="text" class="form-control" id="date" placeholder="mm/dd/yyyy" name="date" required>
 				<div class="invalid-feedback">
 					Please enter a date.
 				</div>
 			</div>
-			<br><br><br>
 			<div class="form-group group" id="Sleeping">
 				<p> How many hours did you sleep last night?</p>
-				<input type="text" id="input" name="input" required>
+				<input type="text" class="form-control" id="input" name="input" required>
 				<div class="invalid-feedback">
 					Please answer the question.
 				</div>
 			</div>
 			<div class="form-group group" id="Mood">
 				<p> On a scale of 1 to 10 how happy were you yesterday?</p>
-				<input type="text" id="input" name="input" required>
+				<input type="text" class="form-control" id="input" name="input" required>
 				<div class="invalid-feedback">
 					Please answer the question.
 				</div>
 			</div>
 			<div class="form-group group" id="Exercise">
 				<p> How many hours of excercise did you get yesterday?</p>
-				<input type="text" id="input" name="input" required>
+				<input type="text" class="form-control" id="input" name="input" required>
 				<div class="invalid-feedback">
 					Please answer the question.
 				</div>
 			</div>
 
-			<input type="reset" class="btn btn-danger" id="clear" value="Clear">
-			<input type="submit" class="btn btn-success" id="save" value="Save">
+			<div class="form-group">
+				<input type="reset" class="btn btn-danger" id="clear" value="Clear">
+				<input type="submit" class="btn btn-success" id="save" value="Save">
+			</div>
 		</form>
 	</div>
 </body>
