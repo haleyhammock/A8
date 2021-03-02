@@ -31,20 +31,20 @@ $(document).ready(function () {
     {
       $('.progress-bar').css('width', '40'+'%').attr('aria-valuenow', 40);
       $('#msg').text('Needs Improvement');
-      $("#prog").addClass("progress-bar-danger");
-      $("#prog").removeClass("progress-bar-success");
-      $("#prog").removeClass("progress-bar-warning");
+      $("#prog").addClass("bg-danger");
+      $("#prog").removeClass("bg-success");
+      $("#prog").removeClass("bg-warning");
     }else if($( "#intervals option:selected" ).text() == 'Recent'){
       $('.progress-bar').css('width', '70'+'%').attr('aria-valuenow', 70);
       $('#msg').text('Needs Improvement');
-      $("#prog").addClass("progress-bar-warning");
-      $("#prog").removeClass("progress-bar-success");
-      $("#prog").removeClass("progress-bar-danger");
+      $("#prog").addClass("bg-warning");
+      $("#prog").removeClass("bg-success");
+      $("#prog").removeClass("bg-danger");
     }else if($( "#intervals option:selected" ).text() == 'All Time'){
       $('.progress-bar').css('width', '80'+'%').attr('aria-valuenow', 80);
-       $("#prog").addClass("progress-bar-success");
-       $("#prog").removeClass("progress-bar-warning");
-       $("#prog").removeClass("progress-bar-danger");
+       $("#prog").addClass("bg-success");
+       $("#prog").removeClass("bg-warning");
+       $("#prog").removeClass("bg-danger");
       $('#msg').text('optimal');
     }
   })
