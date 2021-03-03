@@ -8,7 +8,7 @@
 	<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
 	<script src="/js/bar.js"></script>
 	<script src="js/bootstrap.js"></script>
-
+	<link href="/css/bootstrap.css" rel="stylesheet">
 </head>
 
 <body>
@@ -50,7 +50,7 @@
 
 	<!-- PLEASE FIX ME !!!!-->
 		<div class="data">
-			<button type="button" onClick="graph()" class="btn btn-info"style="margin-left: 25px;">i</button>
+			<button type="button" onClick="graph()" class="btncircle">i</button>
 
 			<div id="options" class="graph-content">
 				<p class="infos">Select an interval to see your recent, all time, or today's stats</p>
@@ -67,7 +67,7 @@
 *** cant use an each block here since each bar needs to update individually ***
 -->
 		<div class="graph">
-			<p style="margin-left: 25px;">Sleep</p>
+			<p style="margin-left: 25px; margin-bottom: -20px;" !important>Sleep</p>
 			<p id="msg" style='font-size: 12; margin-right: 55px;float: right;'>Needs Improvement<p>
 			<div class="progress" style="width: 80%; margin-left: 25px;">
   		<div class="progress-bar bg-warning" role="progressbar" aria-valuenow='60' aria-valuemin="0" aria-valuemax="70" style="width: 70%;" id='prog'>
