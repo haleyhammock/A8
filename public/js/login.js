@@ -10,6 +10,7 @@ function login() {
 		if (username == 'elias' && password == '12345abc') {
 			alert("Login successful!");
 			window.location.replace("home");
+			
 		} else {
 			alert("Incorrect username or password!");
 			$("#username").val('');

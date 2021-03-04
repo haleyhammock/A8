@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Wellness Tracker</title>
+		<title>Wellness Forum</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -16,15 +16,14 @@
 	<body>
 		<div id="main" class="screen">
 	    	<h1 class="">Wellness Forum</h3>
-
 	    	<div class="login">
 		    	<input type="text" id="username" placeholder="Username" required>
 	        	<input type="password" id="password" placeholder="Password" required>
 						<span class="forgot">Forgot <a href="#">password</a>?</span><br>
 	        	<input type="submit" onclick="login()" value="Login">
 						<h4> or </h4><br>
-						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" size='xlarge'>
-						</fb:login-button>
+					<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" size='xlarge'>
+					</fb:login-button>
         	</div>
 
 		</div>

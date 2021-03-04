@@ -1,16 +1,18 @@
 <html>
 <head>
-	<title>Wellness Tracker</title>
-	
+	<title>Wellness Forum</title>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap-4.6.js"></script>
 	<script src="/js/bar.js"></script>
 	<script src="js/record.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<link href="/css/bootstrap-4.6.css" rel="stylesheet">
 	<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -18,90 +20,94 @@
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
 	
+
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
-	<div id="main" class="jumbotron">
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-		<button class="navbar-toggle" data-toggle="collapse" data-target="#sidebar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span></button>
-		<div id="sidebar" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav navbar-left">
-				<li><a class="selected" href="/home">Home</a>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<a class="navbar-brand" href="home"> Wellness Forum</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="home">Home</a>
 				</li>
-				<li><a href="record">Record</a>
-					</li>
-				<li><a href="forum">Forum</a>
-					</li>
-				<li><a href="profile">Profile</a>
-					</li>
-				<li><a href="help">Help</a>
-					</li>
-				<li><button type="button" id="logout" class="btn btn-danger">Log Out</button>
-					</li>
-				</ul>
+				<li class="nav-item active">
+					<a class="nav-link" href="record">Record</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="forum">Forum</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="profile">Profile</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="help">Help</a>
+				</li>
+				<li>
+					<button type="button" id="logout" class="btn btn-danger">Log Out</button>
+				</li>
+			</ul>
 		</div>
+	</nav>
+
+	<div id="main" class="jumbotron">
+		<h3 class="thetitle">Record Data</h3>
 	</div>
-</div>
-</div>
-    <h3 class="thetitle">Record Data</h3>
-		<div class="submitform">
-				<form id="addRecord" role="form" method="get" action="/addRecords">
-					<label class="formlabels2" for="subject" class="recordlabel">Subject:</label>
-					<select name="subject" id="subject" class="recordsel">
-						<option name="subject" value="Sleeping">Sleeping</option>
-						<option name="subject" value="Mood">Mood</option>
-						<option name="subject" value="Exercise">Excercise</option>
-					</select><br>
-					
-					<label class="formlabels" id="date" for="date" name="date">Date:</label>
-					<input type="text" class="forLabels" id="dates" placeholder="mm/dd/yyyy" name="date"><br>
-
-					<label class="formlabels" for="titleRecord" name="titleRecord">Title:</label>
-					<input type="text" class="forLabels" id="titleRecord" placeholder="Title" name="titleRecord"><br>
-
-
-
-
-		</div><br>
-		<div class="group" id="Sleeping">
-		<p> How many hours did you sleep last night?</p>
-		<input type="text" id="exc" name="sleep"><br>
-	</div>
-
-
-
-	<div class="group" id="Mood">
-		<p> On a scale of 1 to 10 how happy were you yesterday?</p>
-		<input type="text" id="stress" name="moody"><br>
-		</div>
-
-		<div class="group" id="Exercise">
-			<p> How many hours of excercise did you get yesterday?</p>
-			<input type="text" id="excer" name="exercise"><br>
+	<div class=container>
+		<form id="addRecordForm" role="form" method="get" action="/addRecord" class="was-validated">
+			<div class="form-group">
+				<label for="subject">Subject</label>
+				<select name="subject" class="custom-select" id="subject">
+					<option value="Sleeping">Sleep</option>
+					<option value="Mood">Mood</option>
+					<option value="Exercise">Excercise</option>
+				</select>
 			</div>
-		<p>&#160;</p>
+			<div class="form-group">
+				<label for="title">Title</label>
+				<input type="text" class="form-control" id="title" placeholder="Enter title" name="title" required>
+				<div class="invalid-feedback">
+					Please enter a title.
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="date">Date</label>
+				<input type="text" class="form-control" id="date" placeholder="mm/dd/yyyy" name="date" required>
+				<div class="invalid-feedback">
+					Please enter a date.
+				</div>
+			</div>
+			<div class="form-group group" id="Sleeping">
+				<p> How many hours did you sleep last night?</p>
+				<input type="text" class="form-control" id="input" name="input" required>
+				<div class="invalid-feedback">
+					Please answer the question.
+				</div>
+			</div>
+			<div class="form-group group" id="Mood">
+				<p> On a scale of 1 to 10 how happy were you yesterday?</p>
+				<input type="text" class="form-control" id="input" name="input" required>
+				<div class="invalid-feedback">
+					Please answer the question.
+				</div>
+			</div>
+			<div class="form-group group" id="Exercise">
+				<p> How many hours of excercise did you get yesterday?</p>
+				<input type="text" class="form-control" id="input" name="input" required>
+				<div class="invalid-feedback">
+					Please answer the question.
+				</div>
+			</div>
 
-
-		<a href="/home"><button type="button" class="btn btn-danger" value="cancel">Cancel</button></a>
-		<input type="submit" id="submitBtn" id="saved" class="btn btn-success" value="Save" onClick="weewoo()">
-
-
-		<div id="submit" class="finish">
-			<p>log successfully saved!</p>
-			<a href="/home"><button type="button" id="goback" class="btn btn-primary goback">Home</button></a>
-		</div>
+			<div class="form-group">
+				<input type="reset" class="btn btn-danger" id="clear" value="Clear">
+				<input type="submit" class="btn btn-success" id="save" value="Save">
+			</div>
+		</form>
 	</div>
-	</div>
-	</form>
-
-</div>
-
-
 </body>
 </html>
