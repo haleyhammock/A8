@@ -26,12 +26,34 @@ $(document).ready(function () {
     $('#'+$(this).val()).show();
 
   });
+  $('#intervals').change(function(){
+    if($( "#intervals option:selected" ).text() == 'Last Week')
+    {
+      $('.progress-bar').css('width', '40'+'%').attr('aria-valuenow', 40);
+      $('#msg').text('Needs Improvement');
+      $("#prog").addClass("bg-danger");
+      $("#prog").removeClass("bg-success");
+      $("#prog").removeClass("bg-warning");
+    }else if($( "#intervals option:selected" ).text() == 'Recent'){
+      $('.progress-bar').css('width', '70'+'%').attr('aria-valuenow', 70);
+      $('#msg').text('Needs Improvement');
+      $("#prog").addClass("bg-warning");
+      $("#prog").removeClass("bg-success");
+      $("#prog").removeClass("bg-danger");
+    }else if($( "#intervals option:selected" ).text() == 'All Time'){
+      $('.progress-bar').css('width', '80'+'%').attr('aria-valuenow', 80);
+       $("#prog").addClass("bg-success");
+       $("#prog").removeClass("bg-warning");
+       $("#prog").removeClass("bg-danger");
+      $('#msg').text('optimal');
+    }
+  })
   /*$('#Saved').click(function(e){
     e.preventDefault();
     //$(".cancel").hide();
     //$(".save").hide();
     $(".finish").show();
-  });*/
+  });
   $('#logout').click(function(e){
     if(confirm('Are you sure you want to logout?')){
       location.href = '/';
@@ -40,4 +62,5 @@ $(document).ready(function () {
       return false
     }
   });
+  */
 });
