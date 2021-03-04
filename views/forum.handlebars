@@ -2,7 +2,7 @@
 <head>
 	<title>Wellness Forum</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
@@ -11,25 +11,19 @@
 	<script src="routes/addRecords.js"></script>
 	<script src="routes/comments.js"></script>
 	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap-4.6.css" rel="stylesheet">
 	<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 	<script src="/js/bar.js"></script>
 	<script src="/js/popUp.js"></script>
 	<script src="/js/forumRecords.js"></script>
-	
-
-	
-
-
-	<link href="/css/bootstrap-4.6.css" rel="stylesheet">
-	<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
 	<link href="/css/post.css" rel="stylesheet">
 	<link href="/css/edit-post.css" rel="stylesheet">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	
 </head>
 
 <body>
@@ -66,7 +60,7 @@
 			<br>
 			<button onClick="openModal()" id="button">+ Add a new post</button><br><br>
 
-			<div class="card border-primary mb-3" style="max-width: 30rem;">
+			<div class="card border-primary mb-3" style="max-width: 40rem;">
   				<div class="card-header text-primary">
   					<h3>Sleep Schedule</h3>
   				</div>
@@ -88,7 +82,7 @@
 
 				{{#each posts}}
 
-				<div class="card border-primary mb-3" style="max-width: 30rem;">
+				<div class="card border-primary mb-3" style="max-width: 40rem;">
   				<div class="card-header text-primary">
     				<h3>{{topic}}</h3>
   				</div>
@@ -110,11 +104,11 @@
 					
 					{{/each}}
 
-					<div id="myModal" class="modal" data-backdrop="static" tabindex="-1" role="dialog">
+					<div id="myModal" class="modal" data-backdrop="static" tabindex="-1" role="dialog" style="max-width: 40rem;">
 
-						<div class="modal-dialog" id="myModal" role="document">
-							<div class="modal-content">
-							<div class="modal-body">
+						<div class="modal-dialog" id="myModal" role="document" style="max-width: 40rem;">
+							<div class="modal-content" style="max-width: 40rem;">
+							<div class="modal-body" style="max-width: 40rem;">
 							<button onClick="openModal()" id="close">x</button>
 
 							<form id="addPosts" role="form" method="get" action="/addPost">
