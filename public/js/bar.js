@@ -5,6 +5,68 @@ function openMenu() {
 function graph() {
   document.getElementById("options").classList.toggle("show");
 }
+function initializePage() {
+    $.get('/profile', onServerResponse);
+}
+function onServerResponse(data){
+  var inputs = String(data.records[data.records.length-1].input);
+  var per = inputs + '0%';
+  document.getElementById("prog").style.width=per;
+  var level = 'Rating: ' + inputs + '/10'
+  $('#msg').text(level)
+    $('#intervals').change(function(){
+
+      var prog =  document.getElementById('prog');
+      if($( "#intervals option:selected" ).text() == 'Last Week')
+      {
+        var lastsev = parseInt(lastseven(data));
+        if(lastsev == 0){
+          alert('Not enough data!')
+        }else{
+          var per = lastsev + '0%';
+          document.getElementById("prog").style.width=per;
+          var level = 'Rating: ' + lastsev+ '/10'
+          $('#msg').text(level)
+        }
+      }else if($( "#intervals option:selected" ).text() == 'Recent'){
+        var inputs = String(data.records[data.records.length-1].input);
+        var per = inputs + '0%';
+        document.getElementById("prog").style.width=per;
+        var level = 'Rating: ' + inputs + '/10'
+        $('#msg').text(level)
+      }else if($( "#intervals option:selected" ).text() == 'All Time'){
+        var dataall = alltime(data);
+        var per = dataall + '0%';
+        document.getElementById("prog").style.width=per;
+        var level = 'Rating: ' + dataall+ '/10'
+        $('#msg').text(level)
+      }
+    })
+
+
+}
+function alltime(data){
+  var add = 0;
+  for(var i = 0; i < data.records.length;i++){
+    var inputs = parseInt(data.records[i].input);
+    add = add += inputs;
+  }
+  add = add/data.records.length;
+  return Math.round(add);
+}
+function lastseven(data){
+  var add = 0;
+  if(data.records.length < 7){
+
+    return 0;
+  }
+  for(var i = data.records.length-1;i >= 7;i--){
+    var inputs = parseInt(data.records[i].input);
+    add = add += inputs;
+  }
+  add = add/data.records.length;
+  return Math.round(add);
+}
 function data(obj) {
   this.date = obj.date;
   this.title = obj.title;
@@ -15,6 +77,7 @@ function weewoo(){
   alert("record saved");
 }
 $(document).ready(function () {
+  initializePage();
   $('#subject').change(function() {
     $('#dates').val('');
     $('#titleRecord').val('');
@@ -26,28 +89,7 @@ $(document).ready(function () {
     $('#'+$(this).val()).show();
 
   });
-  $('#intervals').change(function(){
-    if($( "#intervals option:selected" ).text() == 'Last Week')
-    {
-      $('.progress-bar').css('width', '40'+'%').attr('aria-valuenow', 40);
-      $('#msg').text('Needs Improvement');
-      $("#prog").addClass("bg-danger");
-      $("#prog").removeClass("bg-success");
-      $("#prog").removeClass("bg-warning");
-    }else if($( "#intervals option:selected" ).text() == 'Recent'){
-      $('.progress-bar').css('width', '70'+'%').attr('aria-valuenow', 70);
-      $('#msg').text('Needs Improvement');
-      $("#prog").addClass("bg-warning");
-      $("#prog").removeClass("bg-success");
-      $("#prog").removeClass("bg-danger");
-    }else if($( "#intervals option:selected" ).text() == 'All Time'){
-      $('.progress-bar').css('width', '80'+'%').attr('aria-valuenow', 80);
-       $("#prog").addClass("bg-success");
-       $("#prog").removeClass("bg-warning");
-       $("#prog").removeClass("bg-danger");
-      $('#msg').text('optimal');
-    }
-  })
+
   /*$('#Saved').click(function(e){
     e.preventDefault();
     //$(".cancel").hide();
