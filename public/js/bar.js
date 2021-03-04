@@ -14,6 +14,9 @@ function data(obj) {
 function weewoo(){
   alert("record saved");
 }
+
+
+
 $(document).ready(function () {
   $('#subject').change(function() {
     $('#dates').val('');
@@ -32,6 +35,14 @@ $(document).ready(function () {
     //$(".save").hide();
     $(".finish").show();
   });*/
+
+  $('#delete1').click(function(e){
+  if(confirm('Are you sure you want to delete?')){
+  $('#postButton').remove();
+  $('#delete1').remove();
+}
+});
+
   $('#logout').click(function(e){
     if(confirm('Are you sure you want to logout?')){
       location.href = '/';
