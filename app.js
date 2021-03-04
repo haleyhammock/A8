@@ -57,7 +57,7 @@ app.get("/addPost",addPost.post);
 app.get("/forumLink", forumLink.link);
 app.get("/deletePosts2", deletePosts2.delete);
 app.get("/comments", comments.comment);
-app.get('routes/addRecords.js', function (req, res) {
+app.get('routes/addRecord.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login-file.js'));
 });
 http.createServer(app).listen(app.get('port'), function(){

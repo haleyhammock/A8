@@ -10,8 +10,10 @@
 	<script src="routes/addPost"></script>c
 	<script src="routes/addRecords.js"></script>
 	<script src="routes/comments.js"></script>
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+ <link href="/css/bootstrap.css" rel="stylesheet">
+ <link href="/css/bootstrap.min.css" rel="stylesheet">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap-4.6.css" rel="stylesheet">
 	<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
@@ -21,6 +23,7 @@
 	<script src="/js/bar.js"></script>
 	<script src="/js/popUp.js"></script>
 	<script src="/js/forumRecords.js"></script>
+
 	<link href="/css/post.css" rel="stylesheet">
 	<link href="/css/edit-post.css" rel="stylesheet">
 	
@@ -104,11 +107,11 @@
 					
 					{{/each}}
 
-					<div id="myModal" class="modal" data-backdrop="static" tabindex="-1" role="dialog" style="max-width: 40rem;">
+					<div id="myModal" class="modal" tabindex="-1" role="dialog">
 
-						<div class="modal-dialog" id="myModal" role="document" style="max-width: 40rem;">
-							<div class="modal-content" style="max-width: 40rem;">
-							<div class="modal-body" style="max-width: 40rem;">
+						<div class="modal-dialog" id="myModal" role="document">
+							<div class="modal-content">
+							<div class="modal-body">
 							<button onClick="openModal()" id="close">x</button>
 
 							<form id="addPosts" role="form" method="get" action="/addPost">
