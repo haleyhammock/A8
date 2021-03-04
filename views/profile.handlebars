@@ -2,18 +2,17 @@
 	<head>
 		<title>Wellness Forum</title>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-		<script src="js/bootstrap.js"></script>
+
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link href="/css/bootstrap-4.6.css" rel="stylesheet">
-		<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
 
 		<script src="js/bootstrap.js"></script>
 		<script src="js/bootstrap-4.6.js"></script>
 		<script src="/js/bar.js"></script>
-		<script src="routes/addRecords.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+		
+		<link href="/css/bootstrap-4.6.css" rel="stylesheet">
+		<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -57,16 +56,17 @@
 		{{/each}}
 	</div>
 
+	<h4>Recent Records</h4>
 	{{#each records}}
-	<button id="postButton">
-	<div class="recents">
-		<h4>Recent Records</h4>
+	<button class="buttonPost">
+	<div class="recent">
 		<p class="record_date">Date: {{date}}</p>
-		<p class="record_title">Title: {{title}}</p>
 		<p class="record_subject">Subject: {{subject}}</p>
-		<p class="record_hours">{{question}}: {{input}}</p>
+		<p class="record_title">Title: {{title}}</p>
+		<p class="record_input">Notes: {{input}}</p>
+		<!-- <p class="record_hours">{{question}}: {{input}}</p> -->
 	</div>
-	</button>
+    </div>
 	{{/each}}
 
 

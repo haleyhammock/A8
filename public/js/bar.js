@@ -1,4 +1,3 @@
-
 function openMenu() {
   document.getElementById("sidebar").classList.toggle("show");
 }
@@ -76,18 +75,18 @@ function data(obj) {
 function weewoo(){
   alert("record saved");
 }
+
 $(document).ready(function () {
   initializePage();
   $('#subject').change(function() {
     $('#dates').val('');
-    $('#titleRecord').val('');
+    $('#title').val('');
   });
   $('.group').hide();
   $('#Sleeping').show();
   $('#subject').change(function () {
     $('.group').hide();
     $('#'+$(this).val()).show();
-
   });
 
   /*$('#Saved').click(function(e){
@@ -104,5 +103,4 @@ $(document).ready(function () {
       return false
     }
   });
-  */
 });
