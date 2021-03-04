@@ -6,12 +6,24 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+
+	<script src="routes/addPost"></script>c
+	<script src="routes/addRecords.js"></script>
+	<script src="routes/comments.js"></script>
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap-4.6.css" rel="stylesheet">
+	<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 	<script src="/js/bar.js"></script>
 	<script src="/js/popUp.js"></script>
 	<script src="/js/forumRecords.js"></script>
-	<script src="js/bootstrap-4.6.js"></script>
-	<script src="routes/addPost"></script>
-	<script src="routes/addRecords.js"></script>
+	
+
+	
+
 
 	<link href="/css/bootstrap-4.6.css" rel="stylesheet">
 	<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
@@ -21,6 +33,7 @@
 </head>
 
 <body>
+
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 		<a class="navbar-brand" href="home"> Wellness Forum</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
@@ -49,63 +62,110 @@
 			</ul>
 		</div>
 	</nav>
+			<h3 class="title">Forum</h3>
+			<br>
+			<button onClick="openModal()" id="button">+ Add a new post</button><br><br>
 
-	<div id="main" class="jumbotron">
-    	<h3 class="title">Forum</h3>
-	</div>
+			<div class="card border-primary mb-3" style="max-width: 30rem;">
+  				<div class="card-header text-primary">
+  					<h3>Sleep Schedule</h3>
+  				</div>
 
-    <button onClick="openModal()" id="button">+ Add a new post</button><br><br>
-    <button id="postButton">
-		<div class="posts">
+  				<div class="card-body text-primary">
 
-			<h3>Sleep Schedule</h3>
+					<p>Haley Hammock: Here is my sleep schedule plan!</p>
+					<p>Good Sleep<p>
+						<p>Delete and edit function coming soon!</p>
 
-			<p>Haley Hammock: Here is my sleep schedule plan!</p>
-			<p>Good Sleep<p>
-			<p>Delete and edit function coming soon!</p>
-		</div>
-		</button>
+						<label class="formlabels" for="topicComment" id="topicComment" name="topicComment">Comment:     </label>
+								<input type="text" class="forLabels" id="topicComment2" name="topicComment"><br>
+								<button type="button" id="postComm" class="btn btn-primary" onClick="commentOn()">Post</button><br>
+								
+  								<p id="para"></p>
+					</div>
+				</div>
+			</div>
 
-    {{#each posts}}
+				{{#each posts}}
 
-    <button id="postButton">
-		<div class="posts">
+				<div class="card border-primary mb-3" style="max-width: 30rem;">
+  				<div class="card-header text-primary">
+    				<h3>{{topic}}</h3>
+  				</div>
 
-			<h3>{{topic}}</h3>
-
-			<p>{{message}}</p>
-			<p>{{recordName}}<p>
-			<p>Delete and edit function coming soon!</p>
-		</div>
-		</button>
-
-	{{/each}}
-
-    <div id="myModal" class="modal">
-
-    	<div class="modal-content">
-    		<button onClick="openModal()" id="close">x</button>
-
-    		<form id="addPosts" role="form" method="get" action="/addPost">
-					<label class="formlabels" for="topic" id="topic" name="topic">Topic:     </label>
-					<input type="text" class="forLabels" id="topic" name="topic"><br><br>
-					<label class="formlabelsMessage" for="message">Message:</label>
-					<textarea name="message" rows="10" cols="25"></textarea><br><br>
-						<label for="title" class="formlabels">Find records:</label>
-						 <input type="button" value="Attach"onClick="forumRecord()">
-						<select class="formLabels" id="arr" name="recordName"></select>
-						<br><br>
+  				<div class="card-body text-primary">
+					
 
 
+						<p>You said: {{message}}</p>
+						<p>{{recordName}}<p>
+
+							
+  								
+ 
+  					
+
+					</div>
+					</div>
+					
+					{{/each}}
+
+					<div id="myModal" class="modal" data-backdrop="static" tabindex="-1" role="dialog">
+
+						<div class="modal-dialog" id="myModal" role="document">
+							<div class="modal-content">
+							<div class="modal-body">
+							<button onClick="openModal()" id="close">x</button>
+
+							<form id="addPosts" role="form" method="get" action="/addPost">
+								<label class="formlabels" for="topic" id="topic" name="topic">Topic:     </label>
+							
+								<input type="text" class="forLabels" id="topic" name="topic"><br><br>
+								<label class="formlabelsMessage" for="message">Message:</label>
+								<textarea name="message" rows="10" cols="25"></textarea><br><br>
+								<label for="recs" class="formlabels">Find records:</label>
+
+								<select id = "myList" name="title">  
+									{{#each records}}
+									<option value="{{title}}">{{title}}</option>  
+									{{/each}}
+								</select> 
+
+								<input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input><br>
+							</form>
+						</div>
+						</div>
+						</div>
+					</div>
 
 
+					<div class="modal" id="myModalPost" data-backdrop="static" tabindex="-1" role="dialog">
+						<div class="modal-dialog" id="myModalPost" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">{{topic}}</h5>
+									<button type="button" class="close" onClick="openModalPost()" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p>Modal body text goes here.</p>
+								</div>
+								
 
-					<input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input><br>
-				</form>
-				</div><br>
-		</div>
-	</div>
+
+								<button type="button" onClick="openModalPost()" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
 
 
-</body>
-</html>
+				</body>
+				</html>
+
+
+	
+

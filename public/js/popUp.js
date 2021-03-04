@@ -26,7 +26,17 @@ window.onclick = function(event) {
  	document.getElementById("myModal").classList.toggle("show");
  }
 
+ function openModalPost(){
+ 	document.getElementById("myModalPost").classList.toggle("show");
+ }
+
  function closeModal(){
  	document.getElementsByClassName("model-content").classList.toggle("hide");
-
  }
+
+ function commentOn(){
+ 	var txt = document.getElementById("topicComment2").value
+ 	$("#para").append("You commented: " + txt + "<br>");
+ }
+    
+

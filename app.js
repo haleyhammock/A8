@@ -18,6 +18,7 @@ var login = require('./routes/index');
 var addPost = require('./routes/addPost');
 var forumLink = require('./routes/forumLink');
 var deletePosts2 = require('./routes/deletePosts2');
+var comments = require('./routes/comments');
 // Example route
 // var user = require('./routes/user');
 
@@ -55,6 +56,7 @@ app.get("/addRecord",addRecord.addRecord);
 app.get("/addPost",addPost.post);
 app.get("/forumLink", forumLink.link);
 app.get("/deletePosts2", deletePosts2.delete);
+app.get("/comments", comments.comment);
 app.get('routes/addRecord.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'login-file.js'));
 });
