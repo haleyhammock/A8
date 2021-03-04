@@ -1,4 +1,3 @@
-
 function openMenu() {
   document.getElementById("sidebar").classList.toggle("show");
 }
@@ -15,19 +14,16 @@ function weewoo(){
   alert("record saved");
 }
 
-
-
 $(document).ready(function () {
   $('#subject').change(function() {
     $('#dates').val('');
-    $('#titleRecord').val('');
+    $('#title').val('');
   });
   $('.group').hide();
   $('#Sleeping').show();
   $('#subject').change(function () {
     $('.group').hide();
     $('#'+$(this).val()).show();
-
   });
   $('#intervals').change(function(){
     if($( "#intervals option:selected" ).text() == 'Last Week')
@@ -51,22 +47,6 @@ $(document).ready(function () {
       $('#msg').text('optimal');
     }
   })
-  /*$('#Saved').click(function(e){
-    e.preventDefault();
-    //$(".cancel").hide();
-    //$(".save").hide();
-    $(".finish").show();
-
-  });*/
-
-  $('#delete1').click(function(e){
-  if(confirm('Are you sure you want to delete?')){
-  $('#postButton').remove();
-  $('#delete1').remove();
-}
-});
-
-
   $('#logout').click(function(e){
     if(confirm('Are you sure you want to logout?')){
       location.href = '/';
@@ -75,5 +55,4 @@ $(document).ready(function () {
       return false
     }
   });
-  */
 });
