@@ -40,7 +40,10 @@
 
 #para{
 	color: black;
-	border-radius: 10px;
+	border: 1% solid black;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: thin;
 }
 
 input[type=text] {
