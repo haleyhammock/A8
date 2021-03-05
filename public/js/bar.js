@@ -5,7 +5,7 @@ function graph() {
   document.getElementById("options").classList.toggle("show");
 }
 function initializePage() {
-    $.get('/profile', onServerResponse);
+    $.get('/jsondata', onServerResponse);
 }
 function onServerResponse(data){
   var inputs = String(data.records[data.records.length-1].input);
