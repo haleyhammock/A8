@@ -68,7 +68,6 @@
   					<h3>Sleep Schedule</h3>
   				</div>
 
-  				<a class="nav-link" href="forum">Refresh forum</a>
 
   				<div class="card-body text-primary">
 
@@ -97,6 +96,12 @@
 
 						<p>You said: {{message}}</p>
 						<p>{{recordName}}<p>
+
+							<label class="formlabels" for="topicComment" id="topicComment" name="topicComment">Comment:     </label>
+								<input type="text" class="forLabels" id="topicComment2" name="topicComment"><br>
+								<button type="button" id="postComm" class="btn btn-primary" onClick="commentOn()">Post</button><br>
+
+  								<p id="para"></p>
 
 					</div>
 					</div>

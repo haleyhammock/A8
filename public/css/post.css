@@ -29,6 +29,11 @@
 	margin: auto
 }
 
+#postComm{
+	margin-left: 50px;
+	
+}
+
 input[type=text] {
    width: 225px;
    margin-left: 40%;
