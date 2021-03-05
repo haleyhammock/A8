@@ -95,6 +95,7 @@ $(document).ready(function () {
     //$(".save").hide();
     $(".finish").show();
   });
+  */
   $('#logout').click(function(e){
     if(confirm('Are you sure you want to logout?')){
       location.href = '/';
