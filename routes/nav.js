@@ -1,6 +1,6 @@
-var comments = require("../nav.json");
+var nav = require("../nav.json");
 
-exports.comment = function(request, response) { 
+exports.navigation = function(request, response) { 
 	//console.log(records["data"]);
 
 }
