@@ -30,8 +30,17 @@
 }
 
 #postComm{
-	margin-left: 50px;
+	margin-left: 125px;
 	
+}
+
+#submitBtn{
+	margin-left: 125px;
+}
+
+#para{
+	color: black;
+	border-radius: 10px;
 }
 
 input[type=text] {
