@@ -2,14 +2,15 @@
 <head>
 	<title>Wellness Forum</title>
 	<meta charset="utf-8">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/bootstrap-4.6.css" rel="stylesheet">
-	<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="/js/bar.js"></script>
-	<script src="routes/addRecords.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/bootstrap-4.6.js"></script>
+
+	<link href="/css/bootstrap-4.6.css" rel="stylesheet">
+	<link href="/css/bootstrap.min-4.6.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,13 +44,16 @@
 	</nav>
 
 	<div id="main" class="jumbotron">
-    	<h3 class="thetitle">Help</h3>
+    	<center><h1>Help</h1></center>
 	</div>
 
-	</div>
-		<p>Q: How do I add a record?</p>
-		<p>A: Go to the "record" option in the navigation bar, then input the date, title
-		and select a subject. Then you will be able to input the data related to that subject </p>
+	<div class="container">
+		{{#each help}}
+			<div>
+				<p>Q: {{question}}</p>
+				<p>A: {{answer}}</p>
+			</div>
+		{{/each}}
 	</div>
 
 

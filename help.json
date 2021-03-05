@@ -1,0 +1,24 @@
+{
+	"help":[
+		{
+			"question": "How do I add a record?",
+			"answer": "Go to the Record option in the navigation bar, then select the subject, input the title and date, and answer the question."
+		},
+		{
+			"question": "How do I add a post?",
+			"answer": "Go to the Post option in the navigation bar and click 'Add a new post'. You can comment on other people's posts well!"
+		},
+		{
+			"question": "How do I add a post?",
+			"answer": "Go to the Forum option in the navigation bar and click 'Add a new post'. You can comment on other people's posts well!"
+		},
+		{
+			"question": "Where can I see my records",
+			"answer": "Your records can all be seen in the Profile section, which you can access through the Profile tab of the navigation bar above."
+		},
+		{
+			"question": "What is the forum used for?",
+			"answer": "The forum allows you, the user, to interact with others and gain insight from personal experiences. You can also things that you've learned!"
+		}
+	]
+}
