@@ -1,0 +1,12 @@
+{
+    "nav":[
+    	{
+    		"home": "Home",
+    		"record": "Record",
+    		"forum": "Forum",
+    		"profile": "Profile",
+    		"help": "Help"
+    	}
+                
+    ]
+}

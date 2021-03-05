@@ -68,6 +68,8 @@
   					<h3>Sleep Schedule</h3>
   				</div>
 
+  				<a class="nav-link" href="forum">Refresh forum</a>
+
   				<div class="card-body text-primary">
 
 					<p>Haley Hammock: Here is my sleep schedule plan!</p>
@@ -91,7 +93,6 @@
   				</div>
 
   				<div class="card-body text-primary">
-
 
 
 						<p>You said: {{message}}</p>
@@ -124,13 +125,6 @@
 								<input type="text" class="forLabels" id="topic" name="topic"><br><br>
 								<label class="formlabelsMessage" for="message">Message:</label>
 								<textarea name="message" rows="10" cols="25"></textarea><br><br>
-								<label for="recs" class="formlabels">Find records:</label>
-
-								<select id = "myList" name="title">
-									{{#each records}}
-									<option value="{{title}}">{{title}}</option>
-									{{/each}}
-								</select>
 
 								<input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input><br>
 							</form>
@@ -140,26 +134,7 @@
 					</div>
 
 
-					<div class="modal" id="myModalPost" data-backdrop="static" tabindex="-1" role="dialog">
-						<div class="modal-dialog" id="myModalPost" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title">{{topic}}</h5>
-									<button type="button" class="close" onClick="openModalPost()" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<p>Modal body text goes here.</p>
-								</div>
 
-
-
-								<button type="button" onClick="openModalPost()" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-								</div>
-							</div>
-						</div>
 
 					</div>
 

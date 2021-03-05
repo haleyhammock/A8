@@ -1,110 +1,115 @@
 
 {
-    "data":[
-        {
-            "name": "Elias Fang",
-            "age": "50",
-            "city": "San Diego",
-            "state": "California"
-        }
-    ],
-    "records":[
-            {
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"2"
-            },
-            {
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"7"
-            },
-            {
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"10"
-            },
-            {
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"10"
-            },
-            {
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"9"
-            },
-            {
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"2"
-            },
-            {
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"3"
-            },
-            {
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"3"
-            },{
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"1"
-            },{
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"1"
-            },{
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"10"
-            },{
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"10"
-            },{
-	            "date": "4/10/2010",
-			        "title": "Sleep is for the weak",
-			        "subject": "Sleeping",
-              "question": "How many hours did you sleep last night?",
-			        "input":"10"
-            }
-          ],
-            "recordtypes":[
-                    {
-        			        "subject": "Sleeping"
-                    },
-                    {
-                      "subject": "Mood Level"
-                    },
-                    {
-                      "subject": "Excercise"
-                    }
-            ]
+  "data":[
+    {
+        "name": "Elias Fang",
+        "age": "50",
+        "city": "San Diego",
+        "state": "California"
+    }
+  ],
+  "records":[
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "2",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "7",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "10",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "10",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "9",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "2",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "3",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "3",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "1",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "1",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "10",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "10",
+      "unit": "hour(s) of sleep"
+    },
+    {
+      "date": "4/10/2010",
+      "title": "Sleep is for the weak",
+      "subject": "Sleeping",
+      "input": "10",
+      "unit": "hour(s) of sleep"
+    }
+  ],
+  "recordtypes":[
+    {
+      "subject": "Sleeping"
+    },
+    {
+      "subject": "Mood Level"
+    },
+    {
+      "subject": "Excercise"
+    }
+  ]
 }
