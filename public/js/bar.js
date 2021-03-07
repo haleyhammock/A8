@@ -70,7 +70,7 @@ function data(obj) {
   this.input = obj.input;
 }
 function weewoo(){
-  alert("record saved");
+  alert("Record Saved!");
 }
 
 $(document).ready(function () {
