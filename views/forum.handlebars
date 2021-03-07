@@ -79,7 +79,7 @@
 						<p id="para"></p>
 
 						<label class="formlabels" for="topicComment" id="topicComment" name="topicComment">Comment:     </label>
-								<input type="text" class="forLabels" id="topicComment2" name="topicComment"><br>
+								<input type="text" class="forLabels" id="topicComment2" name="topicComment" autocomplete="off"><br>
 								<button type="button" id="postComm" class="btn btn-primary" onClick="commentOn()">Post</button><br>
 
   								
@@ -116,7 +116,7 @@
 							<div class="modal-body">
 							<button onClick="openModal()" id="close">x</button>
 
-							<form id="addPosts" role="form" method="get" action="/addPost">
+							<form id="addPosts" role="form" method="get" action="/addPost" autocomplete="off">
 								<label class="formlabels" for="topic" id="topic" name="topic">Topic:     </label>
 
 								<input type="text" class="forLabels" id="topic" name="topic"><br><br>
