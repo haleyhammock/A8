@@ -6,6 +6,7 @@
 	margin-left: auto;
 	border-radius: 4px;
 	font-size: 15px;
+
 }
 
 #topic{
@@ -44,6 +45,20 @@
   outline-style: solid;
   outline-color: black;
   outline-width: thin;
+  padding-left: 70px;
+}
+
+#sleep-ex{
+	padding-left: 60px;
+}
+
+#haley{
+	padding-left: 35px;
+	padding-right: 30px;
+}
+
+#topicComment{
+	padding-left: 20px;
 }
 
 input[type=text] {
