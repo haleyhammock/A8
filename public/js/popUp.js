@@ -37,6 +37,7 @@ window.onclick = function(event) {
  function commentOn(){
  	var txt = document.getElementById("topicComment2").value
  	$("#para").append("You commented: " + txt + "<br>");
+ 	$("#topicComment2").val('');
  }
     
 
