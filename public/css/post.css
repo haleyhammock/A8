@@ -76,6 +76,14 @@
 	padding-left: 35px;
 }
 
+.buttonPost{
+	margin-left: 23%;
+}
+
+#recentRecords{
+	margin-left: 27%;
+}
+
 input[type=text] {
    width: 225px;
    margin-left: 40%;
