@@ -63,7 +63,7 @@
 				<center><h1>Forum</h1></center>
 			</div>
 			<br>
-			<button onClick="openModal()" id="button">+ Add a new post</button><br><br>
+			<button onClick="openModal()" id="button" class="btn btn-primary">+ Add a new post</button><br><br>
 
 			<div class="card border-primary mb-3" style="max-width: 40rem;">
   				<div class="card-header text-primary">
@@ -78,9 +78,7 @@
 
 						<label class="formlabels" for="topicComment" id="topicComment" name="topicComment">Comment:     </label>
 								<input type="text" class="forLabels" id="topicComment2" name="topicComment" autocomplete="off"><br>
-								<button type="button" id="postComm" class="btn btn-primary" onClick="commentOn()">Post</button><br>
-
-  								
+								<button type="button" id="postComm" class="btn btn-primary" onClick="commentOn()">Post</button><br>		
 					</div>
 				</div>
 			</div>
@@ -89,19 +87,16 @@
 
 				<div class="card border-primary mb-3" style="max-width: 40rem;">
   				<div class="card-header text-primary">
-    				<h3>{{topic}}</h3>
+    				<h3 id="topicPost">{{topic}}</h3>
   				</div>
 
   				<div class="card-body text-primary">
 
 
-						<p>You said: {{message}}</p>
+						<p id="profilePost">You said: {{message}}</p>
 						<p>{{recordName}}<p>
 
-							<label class="formlabels" for="topicComment" id="topicComment" name="topicComment">Comment:     </label>
-								<input type="text" class="forLabels" id="topicComment2" name="topicComment"><br>
-								<p id="para"></p><br>
-								<button type="button" id="postComm" class="btn btn-primary" onClick="commentOn()">Post</button><br>
+							
 					</div>
 					</div>
 
@@ -112,7 +107,7 @@
 						<div class="modal-dialog" id="myModal" role="document">
 							<div class="modal-content">
 							<div class="modal-body">
-							<button onClick="openModal()" id="close">x</button>
+							<button onClick="openModal()" id="close" class="btn btn-danger btn-sm">x</button>
 
 							<form id="addPosts" role="form" method="get" action="/addPost" autocomplete="off">
 								<label class="formlabels" for="topic" id="topic" name="topic">Topic:     </label>
@@ -121,7 +116,7 @@
 								<label class="formlabelsMessage" for="message">Message:</label>
 								<textarea name="message" rows="10" cols="25"></textarea><br><br>
 
-								<input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input><br>
+								<input type="submit" id="submitBtn" class="btn btn-primary" value="Post"></input><br>
 							</form>
 						</div>
 						</div>

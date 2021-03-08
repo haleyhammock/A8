@@ -13,6 +13,8 @@
 	margin-right: auto;
 	margin-left: auto;
 	border-radius: 4px;
+
+
 }
 #close{
 	margin-right: 90%;
@@ -36,7 +38,7 @@
 }
 
 #submitBtn{
-	margin-left: 125px;
+	margin-left: 145px;
 }
 
 #para{
@@ -59,6 +61,19 @@
 
 #topicComment{
 	padding-left: 20px;
+}
+
+#button{
+	margin-left: 110px;
+}
+
+#topicPost{
+	margin-left: 35%;
+
+}
+
+#profilePost{
+	padding-left: 35px;
 }
 
 input[type=text] {
